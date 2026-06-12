@@ -1,0 +1,16 @@
+# Bağımlılıklar / önbellek
+node_modules/
+
+# Editör / Claude araç ayarları
+.claude/
+.vscode/
+.idea/
+
+# OS dosyaları
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Loglar
+*.log
