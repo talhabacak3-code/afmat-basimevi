@@ -243,8 +243,7 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 .cat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.cat-card.featured { grid-row: span 2; }
-.cat-card.featured .cat-img { min-height: 320px; }
+/* Tüm kartlar eşit boyut (öne çıkan kart artık büyümüyor) */
 .cat-flag {
   position: absolute; top: 14px; left: 14px; z-index: 2;
   background: var(--grad-warm); color: #fff; font-weight: 700; font-size: .76rem;
