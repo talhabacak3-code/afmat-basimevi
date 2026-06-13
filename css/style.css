@@ -173,11 +173,39 @@ img { max-width: 100%; display: block; }
 
 .hero-visual { position: relative; }
 .hero-card {
+  position: relative; overflow: hidden;
   aspect-ratio: 4/5; border-radius: 28px; box-shadow: var(--shadow-lg);
   border: 6px solid #fff; min-height: 360px;
+  background: #efe9fb;
 }
+/* Canlı renk animasyonlu gradyan (video yoksa / yüklenene kadar görünür) */
+.hero-anim {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(125deg, #6d28d9, #2563eb, #ec4899, #f97316, #6d28d9);
+  background-size: 300% 300%;
+  animation: heroFlow 12s ease infinite;
+}
+.hero-anim::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,.35), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,.18), transparent 40%);
+  mix-blend-mode: screen; animation: heroFlow 9s ease-in-out infinite reverse;
+}
+@keyframes heroFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Video: yüklenirse animasyonun üstünü kaplar */
+.hero-video {
+  position: absolute; inset: 0; z-index: 1;
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  background: transparent;
+}
+.hero-video.missing { display: none; }
 .hero-badge {
-  position: absolute; bottom: 18px; left: 18px;
+  position: absolute; z-index: 2; bottom: 18px; left: 18px;
   background: #fff; color: var(--ink); font-weight: 700; font-size: .9rem;
   padding: 10px 16px; border-radius: 999px; box-shadow: var(--shadow);
 }

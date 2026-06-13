@@ -123,6 +123,25 @@
     else if (e.key === 'ArrowRight') step(1);
   });
 
+  /* ---------- Hero videosu: oynat; dosya yoksa gizle (animasyon görünsün) ---------- */
+  var heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    var heroSrc = heroVideo.querySelector('source');
+    var hideHero = function () { heroVideo.classList.add('missing'); };
+    var playHero = function () {
+      heroVideo.muted = true; // autoplay için şart
+      var p = heroVideo.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    heroVideo.addEventListener('error', hideHero);
+    if (heroSrc) heroSrc.addEventListener('error', hideHero);
+    heroVideo.addEventListener('canplay', playHero);
+    heroVideo.addEventListener('loadeddata', playHero);
+    // Kullanıcı etkileşiminde de tekrar dene (bazı tarayıcılar gecikmeli izin verir)
+    document.addEventListener('click', playHero, { once: true });
+    playHero();
+  }
+
   /* ---------- Müşteri yorumları carousel ---------- */
   var revTrack = document.getElementById('reviewsTrack');
   function revScroll(dir) {

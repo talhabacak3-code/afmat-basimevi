@@ -18,7 +18,11 @@ Logo (navbar + footer):
                            logo.png yoksa site geçici olarak "A" rozetine düşer.
 
 Banner / Hero:
-  hero.jpg                 (ana banner görseli — dik/portre çalışır, ~800x1000px ideal)
+  hero.jpg                 (ana banner görseli / video posteri — dik/portre, ~800x1000px ideal)
+  hero.mp4                 (OPSİYONEL — sağdaki hero alanında oynayacak tanıtım videosu)
+                           Dik/portre (~4:5), sessiz, kısa ve döngüye uygun olması idealdir.
+                           Eklenince otomatik oynar; yoksa canlı renkli animasyon görünür.
+                           İpucu: dosya boyutunu küçük tutun (~5-10 MB) ki site hızlı açılsın.
 
 Kategori kartları:
   kategori-tisort.jpg      (Tişört & Tekstil Baskı)
