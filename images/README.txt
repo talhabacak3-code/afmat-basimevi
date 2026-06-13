@@ -25,11 +25,12 @@ Banner / Hero:
                            İpucu: dosya boyutunu küçük tutun (~5-10 MB) ki site hızlı açılsın.
 
 Kategori kartları:
-  kategori-tisort.jpg      (Tişört & Tekstil Baskı)
-  kategori-sublimasyon.jpg (Süblimasyon Baskı)
-  kategori-dijital.jpg     (Dijital Kumaş Baskı)
-  kategori-bayrak.jpg      (Bayrak & Flama Baskı)
-  kategori-kisiye-ozel.jpg (Kişiye Özel Baskı)
+  >>> Şu an her kategoride marka renklerinde ÖRNEK vektörel görseller (.svg) var:
+      kategori-tisort.svg, kategori-sublimasyon.svg, kategori-dijital.svg,
+      kategori-bayrak.svg, kategori-kisiye-ozel.svg
+  >>> Gerçek FOTOĞRAF koymak için: fotoğrafı images/ içine kaydedin (ör.
+      kategori-tisort.jpg) ve index.html'de o kartın data-img değerini
+      "images/kategori-tisort.svg" -> "images/kategori-tisort.jpg" yapın.
 
 Hakkımızda:
   atolye.jpg               (atölye / ekip / makine fotoğrafı)

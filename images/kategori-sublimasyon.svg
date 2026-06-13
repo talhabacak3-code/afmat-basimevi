@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fb923c"/><stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg2)"/>
+  <circle cx="120" cy="130" r="90" fill="#fff" opacity="0.10"/>
+  <circle cx="500" cy="500" r="120" fill="#fff" opacity="0.08"/>
+  <!-- buhar -->
+  <g stroke="#ffffff" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.85">
+    <path d="M262 210 c-18 -16 -18 -34 0 -50 c18 -16 18 -34 0 -50"/>
+    <path d="M312 210 c-18 -16 -18 -34 0 -50 c18 -16 18 -34 0 -50"/>
+    <path d="M362 210 c-18 -16 -18 -34 0 -50 c18 -16 18 -34 0 -50"/>
+  </g>
+  <!-- kupa -->
+  <rect x="210" y="250" width="170" height="170" rx="22" fill="#ffffff"/>
+  <path d="M380 285 h36 a40 40 0 0 1 0 80 h-36" fill="none" stroke="#ffffff" stroke-width="22"/>
+  <!-- baskı: kalp -->
+  <path d="M295 318 c-14 -22 -48 -10 -48 16 c0 22 30 40 48 54 c18 -14 48 -32 48 -54 c0 -26 -34 -38 -48 -16 Z" fill="#ec4899"/>
+  <ellipse cx="295" cy="250" rx="85" ry="14" fill="#f3d9c9"/>
+</svg>

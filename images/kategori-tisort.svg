@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/><stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="pr1" x1="240" y1="290" x2="360" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f97316"/><stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg1)"/>
+  <circle cx="110" cy="120" r="90" fill="#fff" opacity="0.10"/>
+  <circle cx="510" cy="500" r="130" fill="#fff" opacity="0.08"/>
+  <circle cx="520" cy="110" r="46" fill="#fff" opacity="0.10"/>
+  <!-- tişört -->
+  <path d="M262 205 C250 207 244 214 240 224 L160 250 L150 302 L206 300 L222 300 L220 446 C220 458 230 466 242 466 L358 466 C370 466 380 458 380 446 L378 300 L394 300 L450 302 L440 250 L360 224 C356 214 350 207 338 205 C330 232 322 246 300 246 C278 246 270 232 262 205 Z"
+        fill="#ffffff"/>
+  <path d="M262 205 C272 228 286 240 300 240 C314 240 328 228 338 205" fill="none" stroke="#e7e3f5" stroke-width="6" stroke-linecap="round"/>
+  <!-- baskı motifi: yıldız -->
+  <path d="M300 312 l16 33 36 5 -26 25 6 36 -32 -17 -32 17 6 -36 -26 -25 36 -5 Z" fill="url(#pr1)"/>
+  <text x="300" y="430" text-anchor="middle" font-family="'Sora',sans-serif" font-weight="800" font-size="30" fill="#cfc7ee" letter-spacing="2">AFMAT</text>
+</svg>

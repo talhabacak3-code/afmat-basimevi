@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb"/><stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg3)"/>
+  <circle cx="115" cy="120" r="85" fill="#fff" opacity="0.10"/>
+  <circle cx="505" cy="495" r="125" fill="#fff" opacity="0.08"/>
+  <!-- inen desenli kumaş -->
+  <rect x="225" y="250" width="150" height="250" rx="8" fill="#ffffff"/>
+  <g fill="#2563eb" opacity="0.85">
+    <circle cx="255" cy="290" r="9"/><circle cx="300" cy="290" r="9"/><circle cx="345" cy="290" r="9"/>
+    <circle cx="278" cy="330" r="9" fill="#ec4899"/><circle cx="322" cy="330" r="9" fill="#ec4899"/>
+    <circle cx="255" cy="370" r="9" fill="#f97316"/><circle cx="300" cy="370" r="9" fill="#f97316"/><circle cx="345" cy="370" r="9" fill="#f97316"/>
+    <circle cx="278" cy="410" r="9" fill="#06b6d4"/><circle cx="322" cy="410" r="9" fill="#06b6d4"/>
+    <circle cx="255" cy="450" r="9"/><circle cx="300" cy="450" r="9"/><circle cx="345" cy="450" r="9"/>
+  </g>
+  <!-- kumaş topu (rulo) -->
+  <rect x="190" y="210" width="220" height="70" rx="35" fill="#eef2ff"/>
+  <ellipse cx="190" cy="245" rx="22" ry="35" fill="#c7d2fe"/>
+  <ellipse cx="410" cy="245" rx="22" ry="35" fill="#dbe4ff"/>
+</svg>
