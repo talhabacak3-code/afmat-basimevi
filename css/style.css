@@ -166,11 +166,9 @@ img { max-width: 100%; display: block; }
 .hero-copy .lead { color: var(--muted); font-size: 1.1rem; margin: 20px 0 28px; max-width: 540px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-stores { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 26px; color: var(--muted); font-size: .9rem; font-weight: 600; }
-.store-pill { padding: 9px 18px; border-radius: 999px; color: #fff; box-shadow: var(--shadow); transition: transform .18s, box-shadow .25s; display: inline-flex; align-items: center; }
+.store-pill { padding: 9px 16px; border-radius: 12px; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .18s, box-shadow .25s; display: inline-flex; align-items: center; }
 .store-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-.store-pill .wm { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: -.5px; line-height: 1; text-transform: lowercase; }
-.store-pill.ty { background: var(--ty); }
-.store-pill.hb { background: var(--hb); }
+.store-pill img { height: 22px; width: auto; display: block; }
 
 .hero-visual { position: relative; }
 .hero-card {
