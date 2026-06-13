@@ -123,6 +123,19 @@
     else if (e.key === 'ArrowRight') step(1);
   });
 
+  /* ---------- Müşteri yorumları carousel ---------- */
+  var revTrack = document.getElementById('reviewsTrack');
+  function revScroll(dir) {
+    if (!revTrack) return;
+    var card = revTrack.querySelector('.review-card');
+    var amount = card ? card.offsetWidth + 16 : 240;
+    revTrack.scrollBy({ left: dir * amount, behavior: 'smooth' });
+  }
+  var revPrev = document.getElementById('revPrev');
+  var revNext = document.getElementById('revNext');
+  if (revPrev) revPrev.addEventListener('click', function () { revScroll(-1); });
+  if (revNext) revNext.addEventListener('click', function () { revScroll(1); });
+
   /* ---------- Scroll reveal ---------- */
   var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
   if ('IntersectionObserver' in window) {

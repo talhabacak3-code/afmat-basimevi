@@ -113,12 +113,12 @@ img { max-width: 100%; display: block; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 22px; }
 .brand { display: flex; align-items: center; gap: 12px; }
 
-/* Logo: varsa göster, yoksa (onerror -> .missing) A rozeti + metne düş */
+/* Logo: gerçek dosya (logo.png) varsa onu göster; yoksa (onerror -> .missing)
+   vektörel SVG logoya düş. SVG sayfa fontlarını (Sora) kullanır, her yerde net. */
 .brand-logo { height: 46px; width: auto; display: block; }
-.brand .brand-mark, .brand .brand-text { display: none; }
+.brand-logo-svg { height: 46px; width: auto; display: none; }
 .brand-logo.missing { display: none; }
-.brand-logo.missing ~ .brand-mark { display: grid; }
-.brand-logo.missing ~ .brand-text { display: block; }
+.brand-logo.missing ~ .brand-logo-svg { display: block; }
 
 .brand-mark {
   width: 42px; height: 42px; flex: none; border-radius: 12px;
@@ -290,6 +290,49 @@ img { max-width: 100%; display: block; }
 .map-wrap { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--line); min-height: 380px; }
 .map-wrap iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
 
+/* ---------- Müşteri Yorumları ---------- */
+.reviews-panel {
+  position: relative;
+  background: linear-gradient(135deg, #ff8a00, #ff5e00 70%, #ff3d6e);
+  border-radius: 24px; padding: 26px 22px 30px;
+  box-shadow: var(--shadow-lg); overflow: hidden;
+}
+.reviews-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+.reviews-head h2 { color: #fff; font-family: var(--display); font-size: 1.45rem; }
+.reviews-rating { color: #fff; font-weight: 700; font-size: .88rem; background: rgba(255,255,255,.22); padding: 7px 15px; border-radius: 999px; backdrop-filter: blur(4px); }
+.reviews-track {
+  display: flex; gap: 16px; overflow-x: auto;
+  scroll-snap-type: x mandatory; padding-bottom: 4px;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.reviews-track::-webkit-scrollbar { display: none; }
+.review-card {
+  flex: 0 0 220px; scroll-snap-align: start;
+  background: #fff; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 8px 22px rgba(80,30,0,.18);
+  display: flex; flex-direction: column;
+}
+.review-img { width: 100%; aspect-ratio: 3/4; }
+.review-body { padding: 14px 16px 16px; }
+.review-body .stars { color: #ffb400; letter-spacing: 2px; font-size: .95rem; }
+.review-body p { color: var(--ink); font-size: .9rem; margin-top: 6px; line-height: 1.5; }
+.rev-nav {
+  position: absolute; top: 58%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%; border: none;
+  background: #fff; color: var(--ink); font-size: 1.9rem; line-height: 1;
+  cursor: pointer; box-shadow: var(--shadow-lg); display: grid; place-items: center;
+  transition: transform .2s; z-index: 3;
+}
+.rev-nav:hover { transform: translateY(-50%) scale(1.08); }
+.rev-prev { left: 10px; }
+.rev-next { right: 10px; }
+.reviews-cta { text-align: center; margin-top: 28px; }
+
+@media (max-width: 560px) {
+  .review-card { flex-basis: 70vw; }
+  .reviews-head h2 { font-size: 1.2rem; }
+}
+
 /* ---------- Footer ---------- */
 .footer { background: var(--ink); color: #cfc8e6; padding: 50px 0 0; }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 26px; justify-content: space-between; align-items: center; padding-bottom: 30px; }
@@ -298,10 +341,9 @@ img { max-width: 100%; display: block; }
 .footer-brand p { font-size: .85rem; color: #9c93bf; }
 /* Footer logosu beyaz zemin içinde (koyu footer'da görünür kalsın) */
 .footer-logo { height: 54px; background: #fff; padding: 8px 14px; border-radius: 12px; box-shadow: var(--shadow); }
-.footer-brand .brand-mark, .footer-brand .footer-brand-text { display: none; }
+.footer-logo-svg { display: none; height: 54px; width: auto; background: #fff; padding: 8px 16px; border-radius: 12px; box-shadow: var(--shadow); box-sizing: content-box; }
 .footer-logo.missing { display: none; }
-.footer-logo.missing ~ .brand-mark { display: grid; }
-.footer-logo.missing ~ .footer-brand-text { display: block; }
+.footer-logo.missing ~ .footer-logo-svg { display: block; }
 .footer-links, .footer-social { display: flex; flex-wrap: wrap; gap: 18px; }
 .footer-links a, .footer-social a { color: #cfc8e6; font-weight: 600; font-size: .92rem; transition: color .2s; }
 .footer-links a:hover, .footer-social a:hover { color: #fff; }

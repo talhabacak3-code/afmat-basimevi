@@ -30,6 +30,12 @@ Kategori kartları:
 Hakkımızda:
   atolye.jpg               (atölye / ekip / makine fotoğrafı)
 
+Müşteri Yorumları bölümü (dikey/portre görüntülenir, ~600x800px ideal):
+  yorum-1.jpg ... yorum-6.jpg
+  >>> ÖNEMLİ: Buraya KENDİ ürün fotoğraflarınızı koyun (bastığınız tişört,
+      kumaş, ürün vb.). Trendyol'daki müşteri yorum fotoğraflarını (yüz/kişi
+      içeren) buraya koymayın — onlar müşterilere ait, izinsiz kullanılmamalı.
+
 Galeri (kare görüntülenir, ~800x800px ideal):
   galeri-1.jpg
   galeri-2.jpg
